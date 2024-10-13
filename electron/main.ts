@@ -1,4 +1,4 @@
-import { app, BrowserWindow, globalShortcut } from "electron";
+import { app, BrowserWindow } from "electron";
 // import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -39,10 +39,6 @@ function createWindow() {
   // Test active push message to Renderer-process.
   win.webContents.on("did-finish-load", () => {
     win?.webContents.send("main-process-message", new Date().toLocaleString());
-  });
-
-  globalShortcut.register("CommandOrControl+I", () => {
-    win!.webContents.toggleDevTools();
   });
 
   if (VITE_DEV_SERVER_URL) {

@@ -31,6 +31,7 @@ import { nanoid } from "nanoid";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import CustomToast from "../ui/custom-toast";
+import { setLocal } from "@/lib/utils";
 
 type TodoModalProps = {
   isOpen: boolean;
@@ -94,6 +95,7 @@ const TodoModal = ({ isOpen, onClose, editData }: TodoModalProps) => {
           : work
       );
       setWorks([...editWork]);
+      setLocal([...editWork]);
       toast.custom((t) => (
         <CustomToast
           t={t}
@@ -112,6 +114,14 @@ const TodoModal = ({ isOpen, onClose, editData }: TodoModalProps) => {
           duration: data.time,
         },
       ]);
+      setLocal([
+        ...works,
+        {
+          id: nanoid(),
+          focus_name: data.work,
+          duration: data.time,
+        },
+      ]);
       toast.custom((t) => (
         <CustomToast
           t={t}
@@ -120,6 +130,7 @@ const TodoModal = ({ isOpen, onClose, editData }: TodoModalProps) => {
           variant="success"
         />
       ));
+
       setSoundPlay({ isPlay: true, url: "/sound/pop.wav" });
     }
     form.reset();

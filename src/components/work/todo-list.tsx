@@ -8,6 +8,7 @@ import { useState } from "react";
 import TodoModal from "./todo-modal";
 import { toast } from "sonner";
 import CustomToast from "../ui/custom-toast";
+import { setLocal } from "@/lib/utils";
 
 type TodoItemProps = {} & FocusTimeType;
 
@@ -31,6 +32,7 @@ const TodoItem = ({ duration, focus_name, id }: TodoItemProps) => {
 
   const handleRemoveWork = () => {
     const removeWork = works.filter((work) => work.id !== id);
+    setLocal(removeWork);
     setWorks(removeWork);
     toast.custom((t) => (
       <CustomToast

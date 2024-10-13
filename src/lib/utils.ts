@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { FocusTimeType } from "./store/useWorkStore";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -20,4 +21,8 @@ export function removeMetricSuffix(value: string | undefined): number {
   } else {
     return 0;
   }
+}
+
+export function setLocal(value: FocusTimeType[]) {
+  localStorage.setItem("works", JSON.stringify(value));
 }

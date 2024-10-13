@@ -18,6 +18,7 @@ import {
   verticalListSortingStrategy,
   arrayMove,
 } from "@dnd-kit/sortable";
+import { setLocal } from "@/lib/utils";
 
 type TodoHandlerProps = {};
 
@@ -43,6 +44,7 @@ const TodoHandler = ({}: TodoHandlerProps) => {
       const newIndex = works.findIndex((work) => work.id === over?.id);
       const newWorks = arrayMove(works, oldIndex, newIndex);
       setWorks(newWorks);
+      setLocal(newWorks);
     }
   };
 
