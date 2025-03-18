@@ -1,30 +1,71 @@
-# React + TypeScript + Vite
+# ⏳ Focus - Pomodoro Timer Desktop App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/TerryMinn/focus)
 
-Currently, two official plugins are available:
+A **cross-platform** productivity app built with **Electron**, using the **Pomodoro technique** to enhance focus and time management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 **Boost productivity** with **25-minute work sessions**, **5-minute short breaks**, and **10-minute long breaks**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ✨ Features
 
-- Configure the top-level `parserOptions` property like this:
+✅ **Pomodoro Timer** (25-5-10 system)  
+✅ **Task Management** to track progress  
+✅ **Customizable Timers** for flexible work sessions  
+✅ **Desktop Notifications** to stay on track  
+✅ **Cross-Platform** – Works on **Windows, macOS, and Linux**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+---
+
+## 🚀 Getting Started
+
+### 📌 Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (Latest LTS recommended)
+- **Yarn** (or npm)
+
+---
+
+### 📥 Installation
+
+1️⃣ **Clone the repository**
+
+```sh
+git clone https://github.com/TerryMinn/focus.git
+cd focus
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2️⃣ **Install dependencies**
+
+```sh
+yarn
+# or
+npm install
+```
+
+3️⃣ **Run the app in development mode**
+
+```sh
+yarn start
+# or
+npm start
+```
+
+4️⃣ **Build for production**
+
+```sh
+yarn build
+# or
+npm run build
+```
+
+### "You can download in [here](https://github.com/TerryMinn/focus/releases/tag/v0.1.0) for macOs"
+
+## Author
+
+[**Terry Minn**](https://github.com/TerryMinn)
+
+📩 Contact: [shinnthantmindev.mm@gmail.com]
